@@ -1,0 +1,34 @@
+
+```{r}
+# Carreguem el joc de dades
+path = 'weatherAus.csv'
+weatherAus <- read.csv(path, row.names = NULL)
+head(weatherAus)
+```
+
+```{r}
+library(treemapify); library(treemap)
+
+treemap(weatherAus, index = "Location", vSize = "Temp3pm", type = "index")
+```
+
+
+
+```{r}
+library(GGally)
+
+path = 'exams.csv'
+exams <- read.csv(path, row.names = NULL)
+head(exams)
+
+```
+```{r}
+library(GGally)
+ggparcoord(exams, columns = 6:8, groupColumn =1, showPoints = TRUE, scale = "center")
+```
+
+
+```{r}
+
+```
+
